@@ -36,3 +36,6 @@ Error: Cannot find module '/snapshot/pkgtest/main.js'
 I have tried renaming both source files to have `.mjs` filenames, to avoid ambiguity, but `pkg` tries to load `main.js` 
 regardless so with the current filename, it is clear the files it seeks do exist, and can be loaded by node.
 However, it is unable to load any modules skipped by the bytecode "warning" above.
+
+The problem appears to be related to dependent modules, in this case the simple import of `version.js`. If I remove that import from `main.js`, I no longer get the bytecode errors and the resulting executable runs fine.
+
