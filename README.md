@@ -7,6 +7,12 @@ This project runs fine with Node (14 or 16) but fails to build with `pkg`.
 Try `yarn start` or `yarn dev` to launch:
 `node main.js`
 
+This works, and produces:
+```
+$ node main.js
+Hello World 1.0.0
+```
+
 ### Pkg
 Try `yarn build` to launch:
 `pkg main.js -t latest -o pkgtest`
