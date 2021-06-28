@@ -32,3 +32,7 @@ And the resulting executable does not start, it reports:
 ```
 Error: Cannot find module '/snapshot/pkgtest/main.js'
 ```
+
+I have tried renaming both source files to have `.mjs` filenames, to avoid ambiguity, but `pkg` tries to load `main.js` 
+regardless so with the current filename, it is clear the files it seeks do exist, and can be loaded by node.
+However, it is unable to load any modules skipped by the bytecode "warning" above.
