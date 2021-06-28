@@ -2,22 +2,18 @@
   "name": "pkgtest",
   "version": "1.0.0",
   "main": "main.mjs",
-  "type": "module",
   "scripts": {
     "start": "node main.mjs",
     "dev": "node main.mjs",
-    "build": "pkg main.mjs -t node14 -o dist/pkgtest",
-    "build:win": "pkg -t node14-win-x64 main.mjs -o dist/pkgtest.exe",
-    "build:linux": "pkg -t node14-linux-x64 main.mjs -o dist/pkgtest",
-    "build:mac": "pkg -t node14-macos-x64 main.mjs -o dist/pkgtest-macos",
-    "clean": "rimraf dist"
+    "build": "pkg main.mjs -t latest -o pkgtest",
+    "build14": "pkg main.mjs -t node14 -o pkgtest",
+    "build16": "pkg main.mjs -t node16 -o pkgtest"
   },
   "engines": {
     "node": ">= 14.17"
   },
   "dependencies": {},
   "devDependencies": {
-    "pkg": "^5.3.0",
-    "rimraf": "^3.0.2"
+    "pkg": "^5.3.0"
   }
 }
